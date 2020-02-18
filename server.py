@@ -1,4 +1,4 @@
-import index
+from index import phishng_detection
 from flask import Flask
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
@@ -15,7 +15,7 @@ def hello():
 @app.route('/result')
 def result():
     urlname  = request.args['name']
-    result  = phishing_detection.getResult(urlname)
+    result  = phishng_detection(urlname)
     return result
 
 if __name__ == '__main__':

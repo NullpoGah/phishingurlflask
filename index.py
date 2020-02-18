@@ -34,6 +34,16 @@ def extractURL(fileName):
     file.close()
 
     return urlList[0]
+
+
+def phishng_detection(urlname):
+    checkprediction = inputScript.main(urlname)
+    prediction = classifier.predict(checkprediction)
+    if (prediction == 1):
+        return("URL may be a phishing attack!")
+    else:
+        return("URL seems safe")
+
 #checking and predicting
 checkprediction = inputScript.main(extractURL('email.txt'))
 prediction = classifier.predict(checkprediction)

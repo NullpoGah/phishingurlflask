@@ -1,0 +1,8 @@
+flask
+bs4
+scikit-learn
+pandas
+matplotlib
+regex
+tldextract
+whois
