@@ -1,14 +1,13 @@
 # Phishing-URL-Detector
+Лучше всего использовать окружение miniconda https://docs.conda.io/en/latest/miniconda.html
+(На винде лучше использовать anaconda powershell)
 создать новое окружение питону:
-python3 -m venv env
-WIN:
-./env/Scripts/activate
-LINUX:
-source env/bin/activate
-
+conda create --name env
+активировать
+conda activate env
+conda install python
 Установить все библиотеки:
 pip install -r requirements.txt
-
 Запуск сервера:
 python server.py
 
